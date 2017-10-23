@@ -19,5 +19,11 @@ public class BusStop{
       }
       return count;
    }
+   public void addPeople(){
+
+   }
+   public void removePeople(){
+      
+   }
 
 }

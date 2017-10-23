@@ -20,13 +20,22 @@ public class Bus{
       }
       return count;
    }
-
+// collects a single person
    public void collect(Person person){
       if(!isBusFull()){
          int passengerCount = passengerCount();
          this.passengers[passengerCount] = person;
       }
    }
+
+// uses the BusStop and collects people from there.
+   public void pickupAll(BusStop person){
+      if(!isBusFull()){
+         int passengerCount = passengerCount() + queueCount();
+         this.passengers[passengerCount] = person;
+      }
+   }
+
 
    public boolean isBusFull(){
       return passengerCount() == passengers.length;
